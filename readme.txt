@@ -1,4 +1,4 @@
-Theme Name: 1조 벌기 중 첫번째 홈페이지
+Theme Name: 삼성바이오에피스
 Theme URI: http://theme.sir.kr/gnuboard5/demo/basic
 Maker: SIR
 Maker URI: http://sir.kr

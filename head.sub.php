@@ -32,10 +32,10 @@ header("Pragma: no-cache"); // HTTP/1.0
 ?>
 <!doctype html>
 <html lang="ko">
-<meta charset="utf-8">
-<meta name="viewport" id="meta_viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" id="meta_viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">
     <?php
     if (G5_IS_MOBILE) {
         echo '<meta name="viewport" id="meta_viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">' . PHP_EOL;
@@ -59,7 +59,7 @@ header("Pragma: no-cache"); // HTTP/1.0
 
     <!-- 내가 적용시키고자 하는 css -->
     <link rel="stylesheet" href="<?php echo G5_THEME_URL ?>/css/main.css">
-    <link rel="stylesheet" href="<?php echo G5_THEME_URL ?>/css/slick.css">
+    <link rel="stylesheet" href="<?php echo G5_THEME_URL ?>/css/slick.css?ver=1.0">
 
 
 

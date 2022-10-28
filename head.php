@@ -11,6 +11,7 @@ if (G5_COMMUNITY_USE === false) {
     include_once(G5_THEME_SHOP_PATH . '/shop.head.php');
     return;
 }
+include_once(G5_THEME_PATH . '/doc/assets.php');
 include_once(G5_THEME_PATH . '/head.sub.php');
 include_once(G5_LIB_PATH . '/latest.lib.php');
 include_once(G5_LIB_PATH . '/outlogin.lib.php');
@@ -28,9 +29,35 @@ if (defined('_INDEX_')) { // index에서만 실행
 ?>
 
 <div class="Wrap">
-    <header class="hearder">
-        <div class="inner">
-            <a href="<?php echo G5_THEME_URL ?>/doc/m011.php">일반페이지</a>
-            <a href="<?php echo G5_BBS_URL ?>/board.php?bo_table=qa">게시판</a>
+    <div class="top_slogan">
+        <ul class="inner flex">
+            <li><?= $sb_slogan ?></li>
+            <li>
+                <a href="/adm" target="_blank">
+                    <i class="xi-bars"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <header class="header">
+        <div class="inner flex">
+            <h1>
+                <a href="/">
+                    <img src="<?php echo G5_THEME_URL ?>/img/logo05.jpg" alt="<?= $sb_title ?>">
+                </a>
+            </h1>
+            <nav class="gnb">
+                <?php
+                include G5_THEME_PATH . '/doc/nav.php';
+                ?>
+            </nav>
         </div>
     </header>
+
+
+    <!-- 인덱스일 때는 안 보이고, 서브에 들어가면 보이게 해줌 -->
+    <?php
+    if (!defined('_INDEX_')) { // index가 아닐 때...
+        include G5_THEME_PATH . '/sub.head.php';
+    } // sub.head.php를 뿌려준다는 것
+    ?>
