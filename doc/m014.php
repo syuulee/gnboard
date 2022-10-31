@@ -1,6 +1,6 @@
 <?php
 include_once('../../../common.php');
-$page_num = 1;
+$page_num = 4;
 $page_title = "미디어";
 include_once(G5_THEME_PATH . '/head.php');
 ?>

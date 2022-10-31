@@ -24,7 +24,8 @@ if (!defined('_INDEX_')) { // index가 아닐 때...
 
 <footer class="footer">
     <ul>
-        <li>주소 : <?= $sb_address ?> &nbsp;&nbsp; 사업자등록번호 : <?= $sb_num ?></li>
+        <li>주소 : <?= $sb_address ?> </li>
+        <li>사업자등록번호 : <?= $sb_num ?></li>
         <li>대표전화 :<?= $sb_tel ?> &nbsp; Fax : <?= $sb_fax ?></li>
     </ul>
     <address>
@@ -66,10 +67,19 @@ if ($_GET["bo_table"] == "qa") {
 
 <script>
     $(function() {
-        var = num <?= $page_num  ?>;
+        var num = <?= $page_num ?>
         $('.lnb li').eq(num - 1).addClass('on').siblings().removeClass('on');
-    })
+
+        $('.mopen').on('click', function() {
+            $('.header .gnb>ul').toggleClass('on')
+        });
+
+        $('.mopen').on('click', function() {
+            $('.mopen').toggleClass('no')
+        });
+    });
 </script>
+
 
 
 <?php

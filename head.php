@@ -52,6 +52,9 @@ if (defined('_INDEX_')) { // index에서만 실행
                 ?>
             </nav>
         </div>
+        <div class="mopen">
+            <button>mobile btn</button>
+        </div>
     </header>
 
 
